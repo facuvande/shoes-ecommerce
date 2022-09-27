@@ -1,0 +1,10 @@
+.CartWidgetContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 56px;
+    justify-content: space-between;
+}
+.CartWidgetImg{
+    width: 40px;
+}
