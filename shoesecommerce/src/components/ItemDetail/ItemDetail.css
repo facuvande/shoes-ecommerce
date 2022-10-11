@@ -1,0 +1,51 @@
+.dataInfoContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataDataContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    border: 1px solid rgba(0,0,0,.1);
+    width: 30%;
+    height: 94%;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.dataDataContainer h2{
+    font-size: 20px;
+}
+
+.dataDataContainer p{
+    font-size: 16px;
+}
+
+.dataDataContainer .price{
+    font-size: 3rem;
+}
+
+.dataDataContainer .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #abcabc;
+}
+
+.dataDataContainer .descripcion{
+    margin-top: 3rem;
+    color: gray;
+}
+
+.dataInfoContainer img{
+    width: 40%;
+    height: 50%;
+    
+}

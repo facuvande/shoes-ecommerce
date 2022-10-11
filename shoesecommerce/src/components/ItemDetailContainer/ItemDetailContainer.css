@@ -1,0 +1,12 @@
+.dataContainer{
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    border:.1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:#f9f9f9;
+    margin-top: 5rem;
+}
