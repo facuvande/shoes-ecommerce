@@ -16,6 +16,7 @@ function App() {
 
   const addItem = (productToAdd) =>{
     if(!isInCart(productToAdd.id)){
+      // Metodo map para actualizar cantidad
       setCart([...cart, productToAdd])
     }else{
       console.log("Ya esta en el carrito")
