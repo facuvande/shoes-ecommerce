@@ -1,0 +1,55 @@
+.Card{
+    width: 300px;
+    height: 330px;
+    background:#abcabc;
+    margin-right: 20px;
+    border-radius: 20px;
+    transition: .5s;
+}
+.Card:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+.Card img{
+    width: 100%;
+    height: 60%;
+    border-radius: 20px 20px 0 0;
+}
+
+.CardContent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+}
+
+.CardContent h2{
+    font-size: 20px;
+}
+.CardContent p{
+    margin-top: .5rem;
+    text-align: center;
+    width: 80%;
+    font-size: 13px;
+}
+
+.ButtonCard{
+    width: 30%;
+    height: 25%;
+    color: white;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0 auto;
+    margin-top: 5px;
+    transition: .6s;
+}
+.ButtonCard:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}

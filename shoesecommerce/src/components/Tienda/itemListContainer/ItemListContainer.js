@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getProducts, getProductsByCategory } from '../../asyncMock'
+import { getProducts, getProductsByCategory } from '../../../asyncMock'
 import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
@@ -29,7 +29,7 @@ const ItemListContainer = ({greeting}) =>{
     // const productsMapped = products.map(prod => <li>{prod.nombre}</li>)
 
     if(loading){
-        return (<div class="orbit"></div>)
+        return (<div className="orbit"></div>)
     }
 
     return (
@@ -37,9 +37,9 @@ const ItemListContainer = ({greeting}) =>{
             <h1 className='headerTitle'>Listado de <span>PRODUCTOS</span></h1>
             <div className='categories'>
                 <p>Filtros: </p>
-                <NavLink to={'/category/nuevo'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nuevo</NavLink>
-                <NavLink to={'/category/usado'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Usado</NavLink>
-                <NavLink to={'/'} className={'Option'}>Quitar Filtros</NavLink>
+                <NavLink to={'/tienda/category/nuevo'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Nuevo</NavLink>
+                <NavLink to={'/tienda/category/usado'} className={({ isActive }) => isActive ? 'ActiveOption' : 'Option'}>Usado</NavLink>
+                <NavLink to={'/tienda'} className={'Option'}>Quitar Filtros</NavLink>
             </div>
             <ItemList products={products}/>
             

@@ -8,7 +8,7 @@ const Navbar = () => {
             <h1>Shoes</h1>
             <div className='linksContainer'>
                 <Link to='/' className='linksItem'>Inicio</Link>
-                <button className='linksItem'>Tienda</button>
+                <Link to='/tienda' className='linksItem'>Tienda</Link>
                 <button className='linksItem'>Contacto</button>
             </div>
             <CartWidget/>
