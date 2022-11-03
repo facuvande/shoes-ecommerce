@@ -1,7 +1,5 @@
 import './Item.css'
 import { Link } from 'react-router-dom'
-import { useContext } from 'react'
-import { MyContext } from '../../../App'
 
 const Item = ({id,img, nombre, precio, descprecio}) =>{
     const RANKING = `★★★★★☆☆☆☆☆`
@@ -10,7 +8,6 @@ const Item = ({id,img, nombre, precio, descprecio}) =>{
         return RANKING.slice(5 - ranking, 10 - ranking)
     }
     // Desestructura para usar solo addItem y no el cart, si quisiera desestructurar por posicion se usaria []
-    const { addItem }= useContext(MyContext)
 
 
     return (
