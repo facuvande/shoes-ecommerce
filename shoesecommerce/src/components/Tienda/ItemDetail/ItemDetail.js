@@ -12,15 +12,13 @@ const ItemDetail = ({id, img, nombre, stock, descprecio, precio, descripcion}) =
     const {addItem, getProductQuantity} = useContext(CartContext)
     const {setNotification} = useContext(NotificationContext)
     
-    const handleOnAdd = (quantity) =>{
+    const handleOnAdd = (count) =>{
         const productToAdd = {
-            id, nombre, precio, quantity, stock
+            id, nombre, precio, count, stock
         }
-        
-        setgoToCart(true)
-
         addItem(productToAdd)
-        setNotification('success', `El producto ${nombre} cantidad: ${quantity} se agrego correctamente`)
+        setNotification('success', `El producto se agrego correctamente`)
+        setgoToCart(true)
     }
 
     const countAdded = getProductQuantity(id)
@@ -32,7 +30,7 @@ const ItemDetail = ({id, img, nombre, stock, descprecio, precio, descripcion}) =
             <h2>{nombre}</h2>
             <p className='price'>${descprecio} <span>${precio}</span></p>
             <p className='descripcion'>{descripcion}</p>
-            {goToCart ? <Link to={'/cart'} className='terminarCompra'>Ir al carrito</Link> : <ItemCounter onAdd={handleOnAdd} stock={stock} initial={countAdded}/>}
+            {goToCart ? <Link to={'/tienda/cart'} className='terminarCompra'>Ir al carrito</Link> : <ItemCounter onAdd={handleOnAdd} stock={stock} initial={countAdded}/>}
             </div>
         </div>
     )
