@@ -1,53 +1,97 @@
-import { createContext, useState, useEffect } from "react"
+import React, { useState, useEffect, createContext } from "react";
 
 export const CartContext = createContext({
     cart: [],
     totalQuantity: 0
-}) // Retorna componente provider, si tenemos un array iniciamos con array y compartimos array , sino se rompe y kaboom tu app
+});
 
-export const CartProvider = ({children}) =>{
-    const[cart, setCart] = useState([])
-    const[totalQuantity, setTotalQuantity] = useState(0)
-    console.log(cart)
+const CartProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
+  const [totalQuantity, setTotalQuantity] = useState(0)
+  const [total, setTotal]= useState(0)
+  
+ 
+useEffect(()=>{
+  const getTotal = () => {
+    let accu = 0
 
-    // Ejecuta el setQuantity unicamente si nos cambia el cart
-    useEffect(() =>{
-        const totalQty = getQuantity()
-        setTotalQuantity(totalQty)
-    }, [cart])
+    cart.forEach(prod => {
+        accu += prod.count * prod.price  
+    })
 
-    const addItem = (productToAdd) =>{
-        if(!isInCart(productToAdd.id)){
-            // Metodo map para actualizar cantidad
-            setCart([...cart, productToAdd])
-        }else{
-            console.log("Ya esta en el carrito")
+    return accu
+}
+  const total = getTotal()
+  setTotal(total)
+},[cart])
+  
+  
+  
+  // sincroniza la cantidad de productos en el cartWidget
+  useEffect(() => {
+    const getQuantity = () => {
+        let accu = 0
+    
+        cart.forEach(prod => {
+            accu += prod.count
+        })
+    
+        return accu
+    }
+    const totalQty = getQuantity()
+    setTotalQuantity(totalQty)
+}, [cart]);
+
+
+// función para agregar un producto al carrito(no acepta duplicados y lo setea a la nueva cantidad)
+
+  const addItem= (productToAdd) => {
+        if (!isInCart(productToAdd.id)){
+            setCart([...cart, productToAdd]);
+        } else {
+            setCart(
+                cart.map((prod) => {
+                    return prod.id === productToAdd.id
+                        ? { ...prod, count: productToAdd.count }
+                        : prod;
+                })
+            );
         }
     }
 
-    const isInCart = (id) =>{
-      // .some si se cumple retorna true , si no se cumple retorna false
-        return cart.some(prod => prod.id === id);
-    }
+      // función que devuelva true o false si hay un producto que esté en el carrito
+const isInCart = (id) => {
+    return cart.some((prod) => prod.id === id);
+};
 
-    const removeItem = (id) =>{
-        const cartWithoutProduct = cart.filter(prod => prod.id !== id)
-        setCart(cartWithoutProduct)
-    }
 
-    const getQuantity = () =>{
-        let accu = 0;
-        
-        cart.forEach(prod =>{
-            accu+= prod.quantity
-        })
-        return accu
-    }
 
-    return(
-        <CartContext.Provider value={{cart, addItem, removeItem, totalQuantity}}>
-            {children}
-        </CartContext.Provider>
+  // función para remover un producto del carrito
+const removeItem = (id) => {
+    const cartWithoutProduct = cart.filter((prod) => prod.id !== id);
+    setCart(cartWithoutProduct);
+};
 
-    )
+
+// función para limpiar el carrito
+const clearCart = () => {
+    setCart([]);
+};
+
+// funcion para que cuando vuelva a comprar el mismo producto que ya habia agregado al carrito el contador inicia restando la cantidad que ya esta en el carrito
+
+const getProductQuantity = (id)=>{
+    const product= cart.find(prod=> prod.id === id )
+
+    return product?.count
 }
+
+
+return (
+    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart,totalQuantity,total,getProductQuantity}}>
+        {children}
+    </CartContext.Provider>
+    );
+};
+
+export default CartProvider;

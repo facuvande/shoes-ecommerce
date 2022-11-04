@@ -4,12 +4,14 @@ import './ItemListContainer.css'
 import ItemList from '../ItemList/ItemList'
 import { useParams } from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
+import {useContext} from 'react'
+import { NotificationContext } from '../../../notification/NotificationService'
 
 const ItemListContainer = ({greeting}) =>{
 
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    const {setNotification} = useContext(NotificationContext)
     const {categoryId} = useParams()
 
     // Vos react vas a usar useEffect unicamente despues que montes el componente
@@ -21,9 +23,14 @@ const ItemListContainer = ({greeting}) =>{
         asyncFunction(categoryId).then(response =>{
             console.log(response)
             setProducts(response)
+        }).catch(error => {
+            setNotification('error','Hay problemas para obtener los productos')
         }).finally(() =>{
             setLoading(false);
         })
+
+        // Funcion que queda guardada en memoria, cuando detecta que hay un desmontaje ejecuta la funcion, si nunca ocurre el desmontaje no se ejecuta la funcion
+        return () => console.log('Funcion de clean up (desmonto itemListContainer)')
     }, [categoryId])
 
     // const productsMapped = products.map(prod => <li>{prod.nombre}</li>)
