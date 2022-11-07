@@ -29,17 +29,17 @@ return (
                     <tr>
                         <th>Producto</th>
                         <th>Cantidad</th>
-                        <th>Precio por unidad</th>
+                        <th>price por unidad</th>
                         <th>Subtotal</th>
                         <th>Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{prod.nombre}</td>
+                        <td>{prod.name}</td>
                         <td>{prod.count}</td>
-                        <td>${prod.precio}</td>
-                        <td>${prod.count * prod.precio}</td>
+                        <td>${prod.price}</td>
+                        <td>${prod.count * prod.price}</td>
                         <td><button type="button" className="btn-delete" onClick={()=> removeItem(prod.id)}>X</button></td>
                     </tr>
                 </tbody>
@@ -47,10 +47,10 @@ return (
 
             ))
         }
-        <h2>Precio Total: $ {total}</h2>
+        <h2>price Total: $ {total}</h2>
         
         <div className='btn-container'>
-        <Link to='/checkout'><button type="button" className="">Continuar Compra</button></Link>
+        <Link to='/tienda/checkout'><button type="button" className="">Continuar Compra</button></Link>
         <button type="button" className="" onClick={()=> clearCart()}>Limpiar Carrito</button>
         <button className="btn-back" onClick={() => navigate(-1)}>Volver Atras</button>
         

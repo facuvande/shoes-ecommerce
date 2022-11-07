@@ -1,0 +1,17 @@
+.btnOrden{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+  }
+  h6, h5{
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .label{
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .container-class .title-class{
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .rojo{
+    color: red;
+  }
+  

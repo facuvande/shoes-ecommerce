@@ -1,7 +1,7 @@
 import './Item.css'
 import { Link } from 'react-router-dom'
 
-const Item = ({id,img, nombre, precio, descprecio}) =>{
+const Item = ({id,img, name, price, precio}) =>{
     const RANKING = `★★★★★☆☆☆☆☆`
 
     function getRanking(ranking){
@@ -12,10 +12,10 @@ const Item = ({id,img, nombre, precio, descprecio}) =>{
 
     return (
         <div className="box" key={id}>
-            <img src={img} alt={nombre}/>
+            <img src={img} alt={name}/>
             <div className="content">
-                <h2>{nombre}</h2>
-                <h3 className='price'>${descprecio} <span>${precio}</span></h3>
+                <h2>{name}</h2>
+                <h3 className='price'>${precio} <span>${price}</span></h3>
                 <p className='estrellas'>{getRanking(4)}</p>
                 <Link to ={`/tienda/detail/${id}`} className='verDetalle'>Ver Detalle</Link>
             </div>
