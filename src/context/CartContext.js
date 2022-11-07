@@ -15,7 +15,7 @@ useEffect(()=>{
         let accu = 0
 
         cart.forEach(prod => {
-            accu += prod.count * prod.precio  
+            accu += prod.count * prod.price  
         })
 
         return accu

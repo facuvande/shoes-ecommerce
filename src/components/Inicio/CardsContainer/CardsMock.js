@@ -9,7 +9,7 @@ const Cards = [
         id: '2',
         img: 'https://andro4all.com/hero/2021/11/Las-8-mejores-webs-para-comprar-zapatos-y-zapatillas-baratas-online.jpg?width=1200&aspect_ratio=16:9',
         title: 'Variedad de productos',
-        subtitle: 'Contamos con amplia variedad de Zapatillas a un precio accesible!'
+        subtitle: 'Contamos con amplia variedad de Zapatillas a un price accesible!'
     },
     {
         id: '3',

@@ -6,7 +6,7 @@ import { CartContext } from '../../../context/CartContext'
 import { NotificationContext } from '../../../notification/NotificationService'
 
 
-const ItemDetail = ({id, img, nombre, stock, descprecio, precio, descripcion}) =>{
+const ItemDetail = ({id, img, name, stock, precio, price, description}) =>{
 
     const [goToCart, setgoToCart] = useState(false) 
     const {addItem, getProductQuantity} = useContext(CartContext)
@@ -14,7 +14,7 @@ const ItemDetail = ({id, img, nombre, stock, descprecio, precio, descripcion}) =
     
     const handleOnAdd = (count) =>{
         const productToAdd = {
-            id, nombre, precio, count, stock
+            id, name, price, count, stock
         }
         addItem(productToAdd)
         setNotification('success', `El producto se agrego correctamente`)
@@ -25,11 +25,11 @@ const ItemDetail = ({id, img, nombre, stock, descprecio, precio, descripcion}) =
 
     return(
         <div className="dataInfoContainer">
-            <img src={img} alt={nombre}/>
+            <img src={img} alt={name}/>
             <div className='dataDataContainer'>            
-            <h2>{nombre}</h2>
-            <p className='price'>${descprecio} <span>${precio}</span></p>
-            <p className='descripcion'>{descripcion}</p>
+            <h2>{name}</h2>
+            <p className='price'>${precio} <span>${price}</span></p>
+            <p className='descripcion'>{description}</p>
             {goToCart ? <Link to={'/tienda/cart'} className='terminarCompra'>Ir al carrito</Link> : <ItemCounter onAdd={handleOnAdd} stock={stock} initial={countAdded}/>}
             </div>
         </div>

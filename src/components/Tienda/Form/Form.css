@@ -1,0 +1,43 @@
+
+form{
+    padding: 15px;
+    
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    text-align: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    width: 40%;
+    margin: auto;
+    background-color: #abcabc;
+}
+
+
+.form input{
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonSubmit{
+    background-color: rgb(50, 50,50);
+    color: aliceblue;
+    font-size: larger;
+    border: black;
+    border-style: solid;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+
+}
