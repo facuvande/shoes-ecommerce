@@ -21,15 +21,15 @@
 ### Proximamente...
 
 
-<img  src="https://ibb.co/c2n3zBY" width="80%">
+<img  src="https://www.ibb.co/c2n3zBY" width="80%">
 <br />
 <br />
 
-<img  src="https://ibb.co/mDQx80b" width="80%">
+<img  src="https://www.ibb.co/mDQx80b" width="80%">
 <br />
 <br />
 
-<img  src="https://ibb.co/0jv8t3M" width="80%">
+<img  src="https://www.ibb.co/0jv8t3M" width="80%">
 <br />
 <br /> 
 
