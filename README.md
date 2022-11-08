@@ -20,16 +20,15 @@
 ## Preview 👀
 ### Proximamente...
 
-
-<img  src="https://www.ibb.co/c2n3zBY" width="80%">
+![escritorio](https://user-images.githubusercontent.com/107081692/200445752-4bb719c0-3bf6-4a94-8a50-4f07060b3870.png)
 <br />
 <br />
 
-<img  src="https://www.ibb.co/mDQx80b" width="80%">
+![detail](https://user-images.githubusercontent.com/107081692/200445773-8258d836-40a6-4677-bdbd-dce0348c93ad.png)
 <br />
 <br />
 
-<img  src="https://www.ibb.co/0jv8t3M" width="80%">
+![cart](https://user-images.githubusercontent.com/107081692/200445786-3d218a25-d6e9-46ff-915f-33a5f1b14cef.png)
 <br />
 <br /> 
 
