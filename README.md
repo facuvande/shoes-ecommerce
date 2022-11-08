@@ -18,7 +18,7 @@
 <br />
 
 ## Preview 👀
-### Proximamente...
+### Preview del proyecto
 
 ![escritorio](https://user-images.githubusercontent.com/107081692/200445752-4bb719c0-3bf6-4a94-8a50-4f07060b3870.png)
 <br />
