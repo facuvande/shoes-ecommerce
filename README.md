@@ -33,7 +33,8 @@
 <br /> 
 
 
-https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-bc84-bfa7b192aabd.mp4
+![2022-11-07-21-43-08](https://user-images.githubusercontent.com/107081692/200446287-571ec368-0dec-49a4-9cab-7f2dc084a562.gif)
+
 
 <br />
 <br />
