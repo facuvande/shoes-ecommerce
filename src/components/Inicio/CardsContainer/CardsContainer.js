@@ -10,7 +10,6 @@ const CardsContainer = () =>{
         
         // Si se resuelve correctamente
         products().then(response =>{
-            console.log(response)
             setCard(response)
         })
     }, [])

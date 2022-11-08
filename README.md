@@ -1,4 +1,4 @@
-<a name="readme-top"></a>
+<a name="readme-top">Shoes Ecommerce</a>
 
 # E-commerce con React <img src="https://i.giphy.com/media/eNAsjO55tPbgaor7ma/200w.webp" width="25"> 
 
@@ -6,7 +6,7 @@
 
 <div align="center">  
   <p>Este proyecto simula los pasos que hace el usuario al realizar la compra.</p>
-  <p>Fue realizado con React, React Router v6.4.1 para su navegación, Firebase para almacenar los datos de cada producto y la orden que realiza el usuario, CSS y Bootstrap v5.2.2 para los estilos.</p>
+  <p>Fue realizado con React, React Router v6.4.1 para su navegación, Firebase para almacenar los datos de cada producto y la orden que realiza el usuario, CSS para los estilos.</p>
   <a href="https://www.linkedin.com/in/facundo-vandecaveye-b4726319b/" target="_blank">
     <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&color=071A2C" alt="LinkedIn"/>
   </a>
@@ -20,22 +20,21 @@
 ## Preview 👀
 ### Proximamente...
 
-<!-- <br />
 
-<img  src="https://i.ibb.co/BCfSM1j/escritorio.png" width="80%">
-<br />
-<br />
-
-<img  src="https://i.ibb.co/KjHDY7x/detail.png" width="80%">
+<img  src="https://ibb.co/c2n3zBY" width="80%">
 <br />
 <br />
 
-<img  src="https://i.ibb.co/YZdBSQD/cart.png" width="80%">
+<img  src="https://ibb.co/mDQx80b" width="80%">
+<br />
+<br />
+
+<img  src="https://ibb.co/0jv8t3M" width="80%">
 <br />
 <br /> 
 
 
-https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-bc84-bfa7b192aabd.mp4-->
+https://user-images.githubusercontent.com/94803906/194620873-23a67a47-e906-426b-bc84-bfa7b192aabd.mp4
 
 <br />
 <br />
@@ -55,7 +54,12 @@ npm i
 ```
 <br />
 
-> 3. Iniciar proyecto
+> 3. Crear cuenta en Firebase, crear la base de datos y adaptar los productos
+* [Firebase](https://firebase.google.com/docs)
+
+<br />
+
+> 4. Iniciar proyecto
 ```sh
 npm start
 ```
@@ -80,12 +84,15 @@ npm start
 ## Servidor utilizado 💻
 
 * [GitHub](https://github.com/) <img src="https://skillicons.dev/icons?i=github" width="15"/>
+* [Vercel](https://vercel.com/) <img src="https://skillicons.dev/icons?i=vercel" width="15"/>
 
 
 ## Contacto 📧
 
 Facundo Vandecaveye 🇦🇷 - facundovs84@hotmail.com.ar
 
-<!-- Proyecto Link: [githubPages]() -->
+<!-- Proyecto Link: [githubPages](https://shoes-ecommerce-gilt.vercel.app/)  -->
+Proyecto Link: [Vercel](https://shoes-ecommerce-gilt.vercel.app/)
+
 
 <p align="right"><a href="#readme-top">Volver al principio</a></p>

@@ -21,13 +21,12 @@
 }
 
 .counterContainer input{
-    margin-right: 15px;
-    width: 40px;
-    padding: 5px ;
+    width: 50px;
+    padding: 3px ;
     border: 1px solid #c9c9c9;
     border-radius: 5px;
     font-size: 20px;
-    margin: 0 10px;
+    margin: 0 6px;
 }
 
 .counterContainer .button{
